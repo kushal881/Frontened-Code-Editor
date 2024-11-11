@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Image.png" type="image/x-icon">
+</head>
+<body>
+    <div class="code-editor-container">
+        <div class="code-editor html-editor">
+            <div class="head-editor">
+                <div class="left-head">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=256" alt="" width="30px" class="html">
+                    <span>HTML</span>
+                </div>
+                <div class="right-head">
+                    <img src="copy.svg" alt="" class="copy copy1">
+                </div>
+            </div>
+            <textarea name="" id="" class="html-input" spellcheck="false"></textarea>
+        </div>
+        <div class="code-editor css-editor">
+            <div class="head-editor">
+                <div class="left-head">
+                    <img src="https://img.icons8.com/color/512/css3.png" width="40px">
+                    <span>CSS</span>
+                </div>
+                <div class="right-head">
+                    <img src="copy.svg" alt="" class="copy copy2">
+                </div>
+            </div>
+            <textarea name="" id="" class="css-input" spellcheck="false"></textarea>
+        </div>
+        <div class="code-editor js-editor">
+            <div class="head-editor">
+                <div class="left-head">
+                    <img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" alt="" width="25px">
+                    <span>JS</span>
+                </div>
+                <div class="right-head">
+                    <img src="copy.svg" alt="" class="copy copy3">
+                </div>
+            </div>
+            <textarea name="" id="" class="js-input" spellcheck="false"></textarea>
+        </div>
+    </div>
+    <div class="output-container">
+        <div class="output-head">
+            <span>OUTPUT</span>
+            <img src="save.svg" alt="" id="save">
+            <img src="full.svg" alt="" id="full">
+        </div>
+        <iframe id="output">
+
+        </iframe>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
