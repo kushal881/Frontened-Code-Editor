@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Code Editor</title>
+    <title>NeoCode Editor</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Image.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-code"></i>
+            <h1>NeoCode Editor</h1>
+        </div>
+        <div class="theme-toggle">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </div>
+    </div>
+
     <div class="code-editor-container">
         <div class="code-editor html-editor">
             <div class="head-editor">
@@ -16,11 +28,12 @@
                     <span>HTML</span>
                 </div>
                 <div class="right-head">
-                    <img src="copy.svg" alt="" class="copy copy1">
+                    <i class="fas fa-copy copy copy1" title="Copy HTML"></i>
                 </div>
             </div>
-            <textarea name="" id="" class="html-input" spellcheck="false"></textarea>
+            <textarea name="" id="" class="html-input" spellcheck="false" placeholder="Write your HTML here..."></textarea>
         </div>
+        
         <div class="code-editor css-editor">
             <div class="head-editor">
                 <div class="left-head">
@@ -28,11 +41,12 @@
                     <span>CSS</span>
                 </div>
                 <div class="right-head">
-                    <img src="copy.svg" alt="" class="copy copy2">
+                    <i class="fas fa-copy copy copy2" title="Copy CSS"></i>
                 </div>
             </div>
-            <textarea name="" id="" class="css-input" spellcheck="false"></textarea>
+            <textarea name="" id="" class="css-input" spellcheck="false" placeholder="Write your CSS here..."></textarea>
         </div>
+        
         <div class="code-editor js-editor">
             <div class="head-editor">
                 <div class="left-head">
@@ -40,22 +54,28 @@
                     <span>JS</span>
                 </div>
                 <div class="right-head">
-                    <img src="copy.svg" alt="" class="copy copy3">
+                    <i class="fas fa-copy copy copy3" title="Copy JavaScript"></i>
                 </div>
             </div>
-            <textarea name="" id="" class="js-input" spellcheck="false"></textarea>
+            <textarea name="" id="" class="js-input" spellcheck="false" placeholder="Write your JavaScript here..."></textarea>
         </div>
     </div>
+    
     <div class="output-container">
         <div class="output-head">
             <span>OUTPUT</span>
-            <img src="save.svg" alt="" id="save">
-            <img src="full.svg" alt="" id="full">
+            <button class="run-btn" id="save">
+                <i class="fas fa-play"></i> RUN
+            </button>
+            <i class="fas fa-expand" id="full" title="Expand Output"></i>
         </div>
-        <iframe id="output">
-
-        </iframe>
+        <iframe id="output"></iframe>
     </div>
+
+    <div class="notification" id="notification">
+        <span id="notification-message">Copied to clipboard!</span>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
